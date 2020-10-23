@@ -18,7 +18,7 @@ class PostToTimelineTest extends TestCase
     {
         //  disable exception handling to get the right error messages coming through
         $this->withoutExceptionHandling();
-        //  user must be logged in (Step 1)
+        //  User must be logged in (Step 1) (User Is Now Logged In)
         $this->actingAs($user = factory(User::class)->create(), 'api');
 
         //  Make A Post Request To Api - Pass In Data (Step 2)
