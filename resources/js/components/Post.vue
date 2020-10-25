@@ -9,13 +9,13 @@
                 </div>
 
                 <div class="mx-6">
-                    <div class="tex-sm font-bold">Name User</div>
+                    <div class="tex-sm font-bold">{{post.data.attributes.posted_by.data.attributes.name}}</div>
                     <div class="text-sm text-gray-600">12 mins</div>
                 </div>
             </div>
 
             <div class="mt-4">
-                <p>Not having fun at all</p>
+                <p>{{post.data.attributes.body}}</p>
             </div>
         </div>
 
@@ -50,9 +50,13 @@
 
 <script>
 
-export default {
-    name: "Post"
-}
+    export default {
+        name: "Post",
+
+        props: [
+            'post',
+        ]
+    }
 
 </script>
 
