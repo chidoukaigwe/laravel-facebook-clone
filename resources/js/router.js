@@ -2,7 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 //  Import Routes
-import NewsFeed from './views/NewsFeed.vue';
+import NewsFeed from './views/NewsFeed';
+import UserShow from "./views/Users/Show"
 
 //  Install vue router as a plugin for vue application
 Vue.use(VueRouter);
@@ -14,8 +15,14 @@ export default new VueRouter({
 
         {
             path: '/',
+            name: 'home',
             component: NewsFeed
-        }
+        },
+        {
+            path: '/users/:userId',
+            name: 'user.show',
+            component: UserShow
+        },
     ],
 
     mode: 'history',
