@@ -10,7 +10,7 @@
 
                 <div class="mx-6">
                     <div class="tex-sm font-bold">{{post.data.attributes.posted_by.data.attributes.name}}</div>
-                    <div class="text-sm text-gray-600">12 mins</div>
+                    <div class="text-sm text-gray-600">{{post.data.attributes.posted_at}}</div>
                 </div>
             </div>
 
@@ -19,8 +19,8 @@
             </div>
         </div>
 
-        <div class="w-full">
-            <img src="https://chido-designs.co.uk/images/main/Chido.jpg" alt="Post Image" class="w-full">
+        <div class="w-full" v-if="post.data.attributes.image">
+            <img :src="post.data.attributes.image">
         </div>
 
         <div class="px-4 pt-2 flex justify-between text-gray-700 tex-sm">
